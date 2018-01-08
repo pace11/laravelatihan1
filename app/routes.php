@@ -15,3 +15,12 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+
+Route::get('alluser', 'UserController@ambilData');
+
+Route::resource('user','UserController'); // panggil function di UserController, ambil nilai sesuai id
+
+Route::resource('lihat','UserController@lihatData');
+
+Route::resource('posts','PostController');
